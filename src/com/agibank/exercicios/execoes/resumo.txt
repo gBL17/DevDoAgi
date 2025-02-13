@@ -1,0 +1,44 @@
+EXCEÇÕES:
+
+-> tratamento de valores inesperados, o programador deve prever possíveis valores indesejados.
+assim o programa conhece os possíveis erros e não para inesperadamente pois "Trata o erro".
+
+Excesções são objetos derivados da classe Throwable...
+
+comom funcionam excelçoes em java.
+
+O bloco try-catch-finally é uma funcionalidade que permite que o programador lide com exceções que ocorram,
+controlando o fluxo de excecução do código em situações imprevistas.
+
+Caso ocorra alguma exceção dentro do bloco TRY, a execução do código será desviada para dentro do bloco
+CATCH correspondente permitindo um maior controle do fluxo do código sendo executado. Opcionalmente,
+pode ser usado o FINALLY para execução do código incondicionais aos erros.
+
+try{
+    abraça a parte vulnerável do código, se estiver fora ele não está controlando.
+} catch(TipoDeExcecao nomeDaExcecao) {
+    código é desviado para ca no caso de localização de erro no bloco try.
+} finally {
+    OPCIONAL
+    códigos a serem executados incondicionais aos erros.
+}
+
+exemplos comuns, o compilador OBRIGA a serem tratadas ou declaradas na assinatura do método com throws. Elas
+são subclasses de Exception, exceto RuntimeException e suas subclasses.
+
+exemplos comuns:
+
+-IOException (Erro ao acessar arquivos ou rede)
+-SQLException (Erro ao acessar banco de dados)
+-FileNotFoundException (Arquivo não encontrado)
+
+como afetam a programação?
+- O Desenvolvedor precisa tratar a excelçao usando try-catch ou prapagá-la com throws.
+- Induz um código mais seguro, pois obriga o treatamento de erros esperados.
+
+O compilador NÃO OBRIGA serem tratadas. Elas herdam de RuntimeException e ocorrem principalmente por erros de lógica do programador.
+
+Exemplos comuns:
+NullPointerException
+ArrayIndexOutOfBoundsException
+ArithmeticException
