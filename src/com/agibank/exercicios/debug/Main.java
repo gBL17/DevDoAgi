@@ -12,6 +12,6 @@ public class Main {
         for (String s : input){
             result += Integer.parseInt(s);
         }
-        return result;
+        return result/ input.length;
     }
 }
